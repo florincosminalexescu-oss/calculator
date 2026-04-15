@@ -13,4 +13,23 @@ const calculeaza =()=>{
 const sterge=() => document.getElementById('display').value='';
 
 
+const butoaneNumere = document.querySelectorAll('.numar');
+butoaneNumere.forEach((buton) => {
+    buton.addEventListener('click', () => {
+        adaugaNumar(buton.textContent);
+    });
+});
 
+    const butoaneOperatie = document.querySelectorAll('.operatie');
+
+    butoaneOperatie.forEach((buton)=>{
+        buton.addEventListener('click',()=>{
+            adaugaOperatie(buton.textContent);
+        });
+    });
+
+
+
+const stergeCaracter = () => {
+    let display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);}
